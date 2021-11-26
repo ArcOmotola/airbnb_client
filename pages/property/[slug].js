@@ -1,4 +1,5 @@
 import Image from "../../components/Image";
+import Review from "../../components/Review";
 import { sanityClient } from "../../sanity";
 import { isMultiple } from "../../utils";
 
@@ -50,6 +51,16 @@ export default function Property ({
                     <div className="button" onClick={() => {}}>Change Dates</div>
                 </div>
             </div>
+
+            <hr />
+            <h4>{description}</h4>
+            <hr />
+            <h2>{reviewAmount} review{isMultiple(reviewAmount)}</h2>
+            {reviewAmount > 0 &&
+                reviews.map((review) => <Review key={review._key} review={review}/>)
+            }
+            <hr />
+            <h2>Location</h2>
         </div>
     )
 }
