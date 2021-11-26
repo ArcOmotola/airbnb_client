@@ -2,6 +2,7 @@ import Image from "../../components/Image";
 import Review from "../../components/Review";
 import { sanityClient } from "../../sanity";
 import { isMultiple } from "../../utils";
+import Map from "../../components/Map";
 
 export default function Property ({ 
     title,
@@ -61,6 +62,7 @@ export default function Property ({
             }
             <hr />
             <h2>Location</h2>
+            <Map location={location}></Map>
         </div>
     )
 }
