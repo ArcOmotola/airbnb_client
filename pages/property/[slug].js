@@ -3,6 +3,7 @@ import Review from "../../components/Review";
 import { sanityClient } from "../../sanity";
 import { isMultiple } from "../../utils";
 import Map from "../../components/Map";
+import Link from "next/link";
 
 export default function Property ({ 
     title,
@@ -49,7 +50,7 @@ export default function Property ({
                 <div className="price-box">
                     <h2>${pricePerNight}</h2>
                     <h4>{reviewAmount} review{isMultiple(reviewAmount)}</h4>
-                    <div className="button" onClick={() => {}}>Change Dates</div>
+                    <Link href="/"><div className="button">Change Dates</div></Link>
                 </div>
             </div>
 

@@ -65,3 +65,33 @@ body {
 .main-image img {
   width: 50%;
 }
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.feed-container {
+  width: 50%;
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.feed {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.map {
+  width: 50%;
+}
+
+.card {
+  padding: 10px;
+}
+
+.card img {
+  max-width: 250px;
+  border-radius: 20px;
+}
